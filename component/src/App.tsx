@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <section id="center">
-        {/* <Greet name="React" /> */}
+        <Greet name="React" />
         {/* <Player player={playerObj} clickHandler={clickHandler} /> */}
         {/* <Player2 player={playerObj} clickHandler={clickHandler} /> */}
         {/* <EventHandler /> */}

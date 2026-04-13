@@ -1,0 +1,8 @@
+
+// Props의 타입 정의
+const Greet = ({name}: {name: string}) => {
+  return <h2>Hello, {name}!</h2>
+}
+
+export default Greet
+
