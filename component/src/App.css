@@ -1,0 +1,19 @@
+.todo-container {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.todo-list {
+  margin-top: 20px;
+}
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+}
+.todo-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
