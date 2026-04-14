@@ -18,3 +18,4 @@ let carts = ["사과", "바나나", "오렌지"];
 console.log(`장바구니: ${carts.join(", ")}`);
 let carts2 = ["사과", "바나나", "오렌지"];
 console.log(`장바구니 2: ${carts2.join(", ")}`);
+

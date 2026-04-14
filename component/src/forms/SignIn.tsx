@@ -8,6 +8,7 @@ const users = [
   { id: 'user3', password: 'pass3' },
 ]
 
+// 로그인 폼 데이터 타입 정의
 type SignInFormData = {
   id: string
   password: string
@@ -39,7 +40,7 @@ const SignIn = () => {
 
   return (
     <div>
-      <h1>Sign In</h1>
+      <h2>Sign In</h2>
       <form onSubmit={handleSubmit}>
         <input 
           type="text" 

@@ -1,40 +1,35 @@
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Player from './components/Player'
-import Player2 from './components/Player2'
-import EventHandler from './components/EventHandler'
-import Greet from './components/Greet'
-import InputValue from './hooks/InputValue'
-import Todos from './todos/Todos'
-import ListTest from './hooks/ListTest'
-import Todos2 from './todos/Todos2'
-import SignIn from './forms/SignIn'
+import Header from './layouts/Header'
+import Home from './layouts/Home'
+import ProductList from './products/ProductList'
+import ProductInfo from './products/ProductInfo'
+import AddProduct from './products/AddProduct'
+import SignIn from './users/SignIn'
 
 function App() {
-  const playerObj = {
-    name: '신유빈',
-    age: 22,
-  }
-
-  const clickHandler = () => {
-    console.log('버튼이 클릭되었습니다.')
-  }
 
   return (
     <>
-      <section id="center">
-        <Greet name="React" />
-        {/* <Player player={playerObj} clickHandler={clickHandler} /> */}
-        {/* <Player2 player={playerObj} clickHandler={clickHandler} /> */}
-        {/* <EventHandler /> */}
-        {/* <InputValue /> */}
-        {/* <ListTest /> */}
-        {/* <Todos /> */}
-        {/* <Todos2 /> */}
-        <SignIn />
+      <section className="app">
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<ProductList />} />
+            <Route path="/products/:id" element={<ProductInfo />} />
+            <Route path="/products/add" element={<AddProduct />} />
+            <Route path="/signin" element={<SignIn />} />
+          </Routes>
+        </BrowserRouter>
       </section>
     </>
   )
 }
 
 export default App
+
+
+
+

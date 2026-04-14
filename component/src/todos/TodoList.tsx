@@ -1,16 +1,13 @@
 
-type Todo = {
-  id: number
-  text: string
-  completed?: boolean
-}
+// Todo 타입 가져오기
+import type {Todo} from './Todos'
 
-type TodoItemProps = {
+type TodoListProps = { // TodoListProps 타입 정의
   todos: Todo[]
   toggleTodo: (id: number) => void
 }
 
-const TodoItem = ({ todos, toggleTodo }: TodoItemProps) => {
+const TodoList = ({ todos, toggleTodo }: TodoListProps) => {
   return (
     <div className="todo-list">
       <ul>
@@ -31,4 +28,4 @@ const TodoItem = ({ todos, toggleTodo }: TodoItemProps) => {
   )
 }
 
-export default TodoItem
+export default TodoList

@@ -1,13 +1,9 @@
 
 import './App.css'
-import Counter from './components/Counter'
-import DrinkList from './components/DrinkList'
-import Greet from './components/Greet'
-import InputValueState from './components/InputValueState'
-import InputValue from './components/InputValueState'
-import Player from './components/Player'
-import Player2 from './components/Player2'
 
+import Greet from './tests/Greet'
+import Player from './tests/Player'
+import InputValueState from './tests/InputValueState'
 
 function App() {
   const playerObj = {
@@ -22,11 +18,8 @@ function App() {
   return (
     <>
       <section id="center">
-        <h2>TypeScript 기반 React 프로젝트</h2>
-        {/* <Greet name="React" /> */}
-        {/* <Player player={playerObj} clickHandler={clickHandler} /> */}
-        {/* <Counter /> */}
-        {/* <DrinkList /> */}
+        <Greet name="React" />
+        <Player player={playerObj} clickHandler={clickHandler} />
         <InputValueState />
       </section>
     </>
