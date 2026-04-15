@@ -7,7 +7,7 @@ import monitor from '../assets/monitor.png'
 import usb from '../assets/usb.png'
 
 // 이미지 파일과 상품 데이터의 매핑을 위한 객체입니다.
-const imageMap: Record<string, string> = {
+export const imageMap: Record<string, string> = {
   'mouse.png': mouse,
   'keyboard.png': keyboard,
   'monitor.png': monitor,

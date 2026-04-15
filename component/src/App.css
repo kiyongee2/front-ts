@@ -14,6 +14,23 @@
   line-height: 50px;
 }
 .header a:hover {color: white;}
+.header .header-user-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: rgb(249, 249, 146);
+  margin-left: 20px;
+}
+.header .logout-btn {
+  margin-top: 4px;
+  padding: 6px 12px;
+  border: 1px solid #ff9f1c;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ff9f1c;
+  cursor: pointer;
+}
+.header .logout-btn:hover {background-color: #ff9f1c; color: #333;}
 
 /* 상품 목록 스타일 */
 .product-list {width: 80%; margin: 20px auto;}
@@ -150,7 +167,73 @@
   cursor: pointer;
 }
 .signin button:hover {background-color: rgb(0, 150, 0);}   
+.error {
+  color: rgb(197, 13, 13);
+  text-align: center;
+  margin-top: 10px;
+}
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+}
+.signup-link a {
+  color: #640aec;
+  text-decoration: none;
+}
+.signup-link a:hover {text-decoration: underline;} 
 
+/* 회원가입 스타일 */
+.signup {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.signup h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.signup label {font-size: 16px; color: #555;}
+.signup input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.signup button {
+  padding: 10px;
+  background-color: #640aec;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signup button:hover {background-color: #4b00b5;}   
+
+/* Dashboard 스타일 */
+.dashboard {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.dashboard h2 {margin-bottom: 20px; color: #333;}
+.dashboard table {width: 100%; border-collapse: collapse;}
+.dashboard th, .dashboard td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+.dashboard th {background-color: #f2f2f2;color: #333;}
+
+/* Todo 리스트 스타일 */
 .todo-list {
   margin-top: 20px;
 }

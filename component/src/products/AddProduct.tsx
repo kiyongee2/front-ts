@@ -2,12 +2,14 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-// 상품 추가를 위한 폼 데이터 인터페이스입니다.
+/* 상품 추가를 위한 폼 데이터 인터페이스입니다.
+   interface File은 브라우저에서 제공하는 타입으로, 
+   파일 입력에서 사용됩니다.*/
 interface FormData {
   name: string
   price: number
   description: string
-  image: File | null
+  image: File | null  
 }
 
 const AddProduct = () => {
@@ -47,6 +49,8 @@ const AddProduct = () => {
       alert('가격은 0보다 커야 합니다.');
       return;
     }
+    
+    console.log('상품 등록 시도:', formData)
 
     navigate('/products');  // 상품 추가 후 목록 페이지로 이동
   }

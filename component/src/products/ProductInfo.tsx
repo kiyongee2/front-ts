@@ -1,16 +1,6 @@
 import { useParams } from 'react-router-dom'
 import products from '../data/products.json'
-import mouse from '../assets/mouse.png'
-import keyboard from '../assets/keyboard.png'
-import monitor from '../assets/monitor.png'
-import usb from '../assets/usb.png'
-
-const imageMap: Record<string, string> = {
-  'mouse.png': mouse,
-  'keyboard.png': keyboard,
-  'monitor.png': monitor,
-  'usb.png': usb,
-}
+import {imageMap} from './ProductList'
 
 const ProductInfo = () => {
   const { id } = useParams() // URL에서 상품 ID를 가져옵니다.
