@@ -1,34 +1,39 @@
 import { NavLink, useNavigate } from "react-router-dom"
 
-// Header 컴포넌트 Props 타입 정의
-interface HeaderProps {
+interface HeaderProps{
   isLoggedIn: boolean;
-  userId?: string | null; // 로그인한 사용자 ID
-  userRole?: string | null; // 로그인한 사용자 권한
+  userId: string | null;
+  userRole: string | null;
   onLogout: () => void;
+  cartCount: number;
 }
 
-const Header = ({ isLoggedIn, userId, userRole, onLogout }: HeaderProps) => {
-  const navigate = useNavigate(); 
+const Header = ({isLoggedIn, userId, userRole, onLogout, cartCount}: HeaderProps) => {
+  const navigate = useNavigate();
 
   return (
     <header className="header">
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">상품 목록</NavLink>
-        <NavLink to="/products/add" onClick={(e) => {
-          if (userRole !== 'admin') {
-            e.preventDefault(); // 기본 링크 이동을 막고 경고 메시지를 표시
-            alert('관리자 전용 메뉴입니다.');
-          }
-        }}>상품 등록</NavLink>
+        <NavLink 
+          to="/products/add"
+          onClick={(e) => {
+            if(userRole != 'admin'){
+              e.preventDefault();
+              alert("관리자 전용 메뉴입니다.")
+            }
+          }}
+        >상품 등록
+        </NavLink>
+        <NavLink to="/cart">장바구니({cartCount})</NavLink>
         {isLoggedIn ? (
           <div className="header-user-info">
             <span>{userId}님</span>
-            <button 
+            <button
               onClick={() => {
                 onLogout();
-                navigate('/');
+                navigate('/')
               }}
               className="logout-btn"
             >

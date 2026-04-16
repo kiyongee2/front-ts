@@ -3,23 +3,22 @@ import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import users from '../data/users.json'
 
-// 로그인 폼 데이터 타입 정의
-interface SignInForm {
-  username: string
-  password: string
+interface SignInForm{
+  username: string;
+  password: string;
 }
 
-// 로그인 컴포넌트 Props 타입 정의
-interface SignInProps {
+interface SignInProps{
   onLogin: (username: string, role: string) => void;
 }
 
-const SignIn = ({ onLogin }: SignInProps) => {
+const SignIn = ({onLogin}: SignInProps) => {
   const [formData, setFormData] = useState<SignInForm>({
     username: '',
     password: '',
   })
-  // 로그인 결과 상태 관리 (성공/실패 메시지 등)
+
+  //로그인 결과 상태(success/fail)
   const [loginResult, setLoginResult] = useState<string>('')
 
   const navigate = useNavigate();
@@ -41,25 +40,26 @@ const SignIn = ({ onLogin }: SignInProps) => {
       alert('아이디와 비밀번호를 모두 입력해주세요.')
       return
     }
+  
+    //로그인 일치 여부
+    const user = users.find(user => user.username === username && 
+        user.password === password)
 
-    // 로그인 일치 여부
-    const user = users.find(user => 
-      user.username === username && user.password === password)
-    if (!user) {
-      alert('아이디 또는 비밀번호가 올바르지 않습니다.')
-      setLoginResult('fail') // 로그인 실패 상태 업데이트
-      return
+    if(!user){
+      alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+      setLoginResult('fail')
+      return;
     }
-    console.log('로그인 시도:', formData)
-    onLogin(user.username, user.role); // 로그인 성공 시 부모 컴포넌트에 알림
+    console.log("로그인 시도:", formData);
+    onLogin(user.username, user.role);
 
-    // 로그인 성공 시 권한에 따라 다른 페이지로 이동
-    if (user.role === 'admin') {
-      setLoginResult('success') // 로그인 성공 상태 업데이트
-      // 관리자 로그인 시 대시보드로 이동하면서 사용자 정보 전달
-      navigate('/dashboard', { state: { username: user.username, role: user.role } })
-    } else {
-      setLoginResult('success')
+    //로그인 성공시 권한에 따라 페이지 이동
+    if(user.role === 'admin'){
+      setLoginResult('success');
+      navigate('/dashboard', {state: {username: user.username, role: user.role}});
+    }
+    else{
+      setLoginResult('success');
       navigate('/products')
     }
   }
@@ -95,8 +95,7 @@ const SignIn = ({ onLogin }: SignInProps) => {
         아직 계정이 없으신가요? <Link to="/signup">회원가입</Link>
       </p>
 
-      {/* 로그인 실패 메시지 */}
-      {loginResult === 'fail' && <p className="error">로그인 실패. 다시 시도해주세요.</p>}
+      {loginResult === 'fail' && <p className='error'>로그인 실패, 다시 시도하세요</p>}
     </div>
   )
 }

@@ -99,6 +99,40 @@
   border-radius: 8px;
   display: inline-block;
 }
+.product-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+.product-buttons .btn-list {
+  padding: 10px 24px;
+  border: 2px solid #555;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #555;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.product-buttons .btn-list:hover {
+  background-color: #555;
+  color: #fff;
+}
+.product-buttons .btn-cart {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e91e63;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.product-buttons .btn-cart:hover {
+  background-color: #c2185b;
+}
 
 /* 상품 등록 스타일 */
 .add-product {
