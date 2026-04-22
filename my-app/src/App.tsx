@@ -4,6 +4,8 @@ import './App.css'
 import Greet from './tests/Greet'
 import Player from './tests/Player'
 import InputValueState from './tests/InputValueState'
+import Clock from './components/Clock'
+
 
 function App() {
   const playerObj = {
@@ -18,9 +20,10 @@ function App() {
   return (
     <>
       <section id="center">
-        <Greet name="React" />
-        <Player player={playerObj} clickHandler={clickHandler} />
-        <InputValueState />
+        {/* <Greet name="React" /> */}
+        {/* <Player player={playerObj} clickHandler={clickHandler} /> */}
+        {/* <InputValueState /> */}
+        <Clock />
       </section>
     </>
   )

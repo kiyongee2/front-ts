@@ -38,7 +38,11 @@ const ProductInfo = ({ onAddToCart }: ProductInfoProps) => {
             >
               목록으로
             </button>
-            <button className="btn-cart">장바구니에 추가</button>
+            <button className="btn-cart" onClick={() => {
+              onAddToCart({ id: product.id, name: product.name, price: product.price, image: product.image })
+              alert(`${product.name}이(가) 장바구니에 추가되었습니다.`)
+            }}>장바구니에 추가</button>
+            {/* <button className="btn-cart">장바구니에 추가</button> */}
           </div>
         </div>
       </div>
@@ -48,7 +52,3 @@ const ProductInfo = ({ onAddToCart }: ProductInfoProps) => {
 
 export default ProductInfo
 
-{/* <button className="btn-cart" onClick={() => {
-              onAddToCart({ id: product.id, name: product.name, price: product.price, image: product.image })
-              alert(`${product.name}이(가) 장바구니에 추가되었습니다.`)
-            }}>장바구니에 추가</button> */}

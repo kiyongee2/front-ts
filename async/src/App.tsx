@@ -6,7 +6,7 @@ import TodoDetail from './placeholder/TodoDetail'
 import AddTodo from './placeholder/AddTodo'
 
 function App() {
-
+  
   return (
     <>
       <section id="center">

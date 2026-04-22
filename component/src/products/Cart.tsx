@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { imageMap } from './ProductList'
 
+// CartItem 인터페이스는 장바구니에 담긴 상품의 정보를 나타냅니다.
 export interface CartItem {
   id: number
   name: string
@@ -9,6 +10,7 @@ export interface CartItem {
   quantity: number
 }
 
+// CartProps 인터페이스는 Cart 컴포넌트가 받는 props의 타입을 정의합니다.
 interface CartProps {
   cartItems: CartItem[]
   onUpdateQuantity: (id: number, quantity: number) => void
