@@ -4,7 +4,10 @@ import './App.css'
 import Greet from './tests/Greet'
 import Player from './tests/Player'
 import InputValueState from './tests/InputValueState'
-import Clock from './components/Clock'
+import Clock from './hooks/Clock'
+import PlaceHolder from './hooks/PlaceHolder'
+import TextInputWithFocus from './hooks/TextInputWithFocus'
+import Counter from './hooks/Counter'
 
 
 function App() {
@@ -23,7 +26,10 @@ function App() {
         {/* <Greet name="React" /> */}
         {/* <Player player={playerObj} clickHandler={clickHandler} /> */}
         {/* <InputValueState /> */}
-        <Clock />
+        {/* <Clock /> */}
+        {/* <PlaceHolder /> */}
+        {/* <TextInputWithFocus /> */}
+        <Counter />
       </section>
     </>
   )
