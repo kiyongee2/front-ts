@@ -54,7 +54,7 @@ console.log(`이름: ${user2.name}, 나이: ${user2.age}`);
 
 // user2.id = 3; // 오류: id는 readonly 속성이므로 변경할 수 없습니다.
 
-type ProductCondition = "new" | "used" | "refurbished";
+type ProductCondition = "new" | "used" | "refurbished"; 
 
 interface Product {
     id: number;
