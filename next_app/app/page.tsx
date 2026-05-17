@@ -16,8 +16,8 @@ export default function Home() {
 
   return (
     <main>
-      <h1 className="text-2xl m-5 text-red-500">Welcome to Next.js!</h1>
-      <p className="text-lg m-5">{message}</p>
+      <h1 className="title">Welcome to Next.js!</h1>
+      <p className="msg">{message}</p>
       <div className="m-5">
         <label htmlFor="name">Enter your name: </label>
         <input
@@ -25,11 +25,14 @@ export default function Home() {
           id="name"
           value={input}
           onChange={doChange}
-          className="border border-gray-300 rounded px-2 py-1"
+          className="input"
         />
-        <button onClick={doClick} className="bg-blue-800 text-white px-4 py-2 rounded">
+        <button onClick={doClick} className="button">
           Submit
         </button>
+      </div>
+      <div>
+          <a href="/other" className="link">Go to Other Page</a>
       </div>
     </main>
   );
