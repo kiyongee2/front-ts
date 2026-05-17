@@ -26,7 +26,7 @@ body {
 }
 
 .title {
-  @apply text-2xl m-5 text-red-500;
+  @apply text-2xl m-5 font-bold text-red-600;
 }
 .msg {
   @apply text-lg m-5 text-gray-900;
