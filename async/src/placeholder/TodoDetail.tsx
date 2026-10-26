@@ -3,21 +3,24 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import type { Todo } from './Todos'; // Todos.tsx에서 Todo 인터페이스 가져오기
 
+// 특정 할 일 항목의 상세 정보를 표시하는 컴포넌트
 const TodoDetail = () => {
   const {id} = useParams<{id:string}>();
-  const navigate = useNavigate();
   const [todo, setTodo] = useState<Todo | null>(null);
+  const navigate = useNavigate();
 
+  // 컴포넌트가 마운트될 때 해당 할 일 항목의 상세 정보를 가져오는 useEffect 훅을 사용함
   useEffect(() => {
+    // 비동기 함수 fetchTodo를 정의함
     const fetchTodo = async () => {
       try{
+        // JSONPlaceholder API에서 해당 할 일 항목의 상세 정보를 가져옴
         const response = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`);
         setTodo(response.data)
       }catch(error){
         alert("오류 발생")
       }
     }
-
     fetchTodo();
     /*axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`)
       .then(response => {

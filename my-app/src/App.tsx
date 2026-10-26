@@ -1,19 +1,16 @@
 
 import './App.css'
-
-import Greet from './tests/Greet'
-import Player from './tests/Player'
-import InputValueState from './tests/InputValueState'
-import Clock from './hooks/Clock'
-import PlaceHolder from './hooks/PlaceHolder'
-import TextInputWithFocus from './hooks/TextInputWithFocus'
-import Counter from './hooks/Counter'
+import Drink from './components/Drink'
+import Greet from './components/Greet'
+import Greet2 from './components/Greet2'
+import InputValueState from './components/InputValueState'
+import Player from './components/Player'
 
 
 function App() {
   const playerObj = {
-    name: '신유빈',
-    age: 22,
+    name: '안세영',
+    age: 24,
   }
 
   const clickHandler = () => {
@@ -22,14 +19,15 @@ function App() {
 
   return (
     <>
-      <section id="center">
-        {/* <Greet name="React" /> */}
-        {/* <Player player={playerObj} clickHandler={clickHandler} /> */}
+      <section className="app">
+        {/* <Greet name="도경수" age={33} /> */}
+        {/* <Greet2 name="도경수" age={33} /> */}
+        {/* <Player 
+          player={playerObj} 
+          clickHandler={clickHandler} 
+        /> */}
         {/* <InputValueState /> */}
-        {/* <Clock /> */}
-        {/* <PlaceHolder /> */}
-        {/* <TextInputWithFocus /> */}
-        <Counter />
+        <Drink />
       </section>
     </>
   )

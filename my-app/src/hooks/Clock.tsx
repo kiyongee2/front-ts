@@ -24,6 +24,7 @@ const style = {
 const Clock = () => {
   const [time, setTime] = useState(new Date());
 
+  // 현재 시간을 1초마다 업데이트하는 useEffect 훅
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date());

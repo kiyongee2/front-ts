@@ -1,0 +1,12 @@
+"use strict";
+let msg = "Good, Luck!!";
+console.log(msg);
+let age = 30;
+console.log(`나이: ${age}`);
+let carts = ["사과", "바나나", "오렌지"];
+console.log(`장바구니: ${carts}`);
+let carts2 = ["사과", "바나나", "오렌지"];
+console.log(`장바구니: ${carts2}`);
+let value = 10;
+value = "안녕";
+console.log(value);

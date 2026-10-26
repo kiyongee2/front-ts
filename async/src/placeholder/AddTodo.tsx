@@ -17,8 +17,8 @@ const AddTodo = () => {
       alert("할일 입력");
       return;
     }
-
-    setIsLoading(true); //로딩 시작
+    //로딩 시작
+    setIsLoading(true); 
     
     try{
       const response = await axios.post("https://jsonplaceholder.typicode.com/todos", {
@@ -45,6 +45,7 @@ const AddTodo = () => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder='할일 입력'
         />
+        {/* isLoading이 true 일때 -> 버튼이 활성화 */}
         <button type='submit' disabled={isLoading}>
           {isLoading ? '로딩 중' : '추가'}
         </button>

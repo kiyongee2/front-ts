@@ -34,15 +34,4 @@ let product1 = {
     condition: "new"
 };
 console.log(`상품명: ${product1.name}, 가격: ${product1.price}, 상태: ${product1.condition}`);
-let student1 = {
-    id: 1,
-    name: "김선화",
-    subjects: [
-        { courseId: 101, courseName: "수학", grade: "A" },
-        { courseId: 102, courseName: "영어", grade: "B" }, // grade는 선택적이므로 생략 가능
-    ]
-};
-console.log(`학생명: ${student1.name}`);
-student1.subjects.forEach(subject => {
-    console.log(`과목명: ${subject.courseName}, 학점: ${subject.grade}`);
-});
+

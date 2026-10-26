@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 
+// 입력값 상태를 관리하는 컴포넌트
 const InputValueState = () => {
   const [text, setText] = useState<string>('');
   const [num, setNum] = useState<number>(0);
@@ -9,14 +10,14 @@ const InputValueState = () => {
   // 이벤트 객체의 타입은 React.ChangeEvent<HTMLInputElement>입니다.
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
-    setText(e.target.value)
+    setText(e.target.value);
   }
 
   // 숫자 입력값 상태 변경
   const handleNumChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setNum(Number(e.target.value))
+    setNum(Number(e.target.value));
   }
-
+ 
   return (
     <div>
       <h2>입력값 상태 변경</h2>
