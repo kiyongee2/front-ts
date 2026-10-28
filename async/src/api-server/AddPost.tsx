@@ -32,21 +32,25 @@ const AddPost = () => {
   }
 
   return(
-    <div>
+    <div className="add-post">
       <h2>게시글 작성</h2>
       <form onSubmit={handleSubmit}>
-        <div><input 
-          type="text" 
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="제목을 입력하세요"
-        /></div>
-        <div><textarea 
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-          placeholder="내용을 입력하세요"
-          rows={4}
-        /></div>
+        <div>
+          <input 
+            type="text" 
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="제목을 입력하세요"
+          />
+        </div>
+        <div>
+          <textarea 
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
+            placeholder="내용을 입력하세요"
+            rows={5}
+          />
+        </div>
         <button type="submit" disabled={isLoading}>
           {isLoading ? "등록중..." : "등록"}
         </button>

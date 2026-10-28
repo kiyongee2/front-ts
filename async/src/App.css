@@ -1,4 +1,4 @@
-#center{
+.app{
   margin: 50px auto;
   width: 80%;
 }
@@ -20,5 +20,20 @@
   transition: background-color 0.3s ease;
 }
 button {
-  margin-left: 5px;
+  margin: 10px 5px;
+}
+
+/* 포스트 폼 등록 */
+.add-post form{
+  width: 30%;
+  margin: 20px auto;
+}
+.add-post form input, 
+.add-post form textarea{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+.add-post form textarea{
+  resize: vertical;
 }
