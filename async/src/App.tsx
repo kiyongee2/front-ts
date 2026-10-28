@@ -1,20 +1,20 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Todos from './placeholder/Todos'
-import TodoDetail from './placeholder/TodoDetail'
-import AddTodo from './placeholder/AddTodo'
+import Posts from './api-server/Post'
+import PostDetail from './api-server/PostDetail'
+import AddPost from './api-server/AddPost'
 
 function App() {
   
   return (
     <>
-      <section id="center">
+      <section className="app">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Todos />} />
-            <Route path="/todos/:id" element={<TodoDetail />} />
-            <Route path="/todos/add" element={<AddTodo />} />
+            <Route path="/" element={<Posts />} />
+            <Route path="/posts/:id" element={<PostDetail />} />
+            <Route path='/posts/add' element={<AddPost />} />
           </Routes>
         </BrowserRouter> 
       </section>

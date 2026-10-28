@@ -1,10 +1,9 @@
 
 import './App.css'
-import Drink from './components/Drink'
-import Greet from './components/Greet'
-import Greet2 from './components/Greet2'
-import InputValueState from './components/InputValueState'
-import Player from './components/Player'
+import Box from './children/Box'
+import Card from './children/Card'
+import Memo from './stroage/Memo'
+import Todos from './stroage/Todos'
 
 
 function App() {
@@ -20,14 +19,19 @@ function App() {
   return (
     <>
       <section className="app">
-        {/* <Greet name="도경수" age={33} /> */}
-        {/* <Greet2 name="도경수" age={33} /> */}
-        {/* <Player 
-          player={playerObj} 
-          clickHandler={clickHandler} 
-        /> */}
-        {/* <InputValueState /> */}
-        <Drink />
+        {/* <Card title="공지사항">
+          <p>내일은 단풍 구경을 갑니다.</p>
+        </Card>
+
+        <Card title='오늘의 할 일'>
+          <ul>
+            <li>Props 타입 복습</li>
+            <li>children 예제 실습</li>
+          </ul>
+          <button>확인</button>
+        </Card> */}
+        <Memo />
+        <Todos />
       </section>
     </>
   )
